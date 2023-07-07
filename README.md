@@ -1,5 +1,5 @@
 # MadiCare_MAD
 
-|    Name   |id         |     Degree|
+|    Name   |Student ID         |     Degree|
 |----------|------------|-----------|
-|          |            |           | 
+|     001     |            |           | 
