@@ -1,7 +1,7 @@
-# MadiCare_MAD
+# MadiCare MAD
 
-|    Name   |Student ID         |     Degree|
-|----------|------------|-----------|
+|    Name     |Student ID     |Degree|
+|-------------|---------------|------|
 |     abc     |   001         |  SE | 
 |     abc     |   001         |  SE | 
 |     abc     |   001         |  SE | 
