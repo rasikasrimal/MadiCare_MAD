@@ -1,5 +1,5 @@
 # MadiCare MAD
-(add description about the coursework here with report)
+(add description about the coursework with report)
 
 |    Name     |Student ID     |Degree|
 |-------------|---------------|------|
