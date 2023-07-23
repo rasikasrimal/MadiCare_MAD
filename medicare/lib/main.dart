@@ -2,5 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:medicare/intro_home.dart';
 
 void main() {
-  runApp(const Home());
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Navigator(
+        onGenerateRoute: (settings) {
+          return MaterialPageRoute(
+            settings: settings,
+            builder: (context) => const Home(),
+          );
+        },
+      ),
+    );
+  }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medicare/constants/colors.dart';
 
 class TextButton1 extends StatelessWidget {
   final String text;
@@ -29,32 +28,6 @@ class TextButton2 extends StatelessWidget {
       ),
       onPressed: () {},
       child: Text(text),
-    );
-  }
-}
-
-class TextButton3 extends StatelessWidget {
-  final String text;
-
-  const TextButton3({Key? key, required this.text}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 150,
-      child: TextButton(
-        style: TextButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(100),
-          ),
-          backgroundColor: mainColor,
-          foregroundColor: Colors.white,
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-          textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-        onPressed: () {},
-        child: Text(text),
-      ),
     );
   }
 }

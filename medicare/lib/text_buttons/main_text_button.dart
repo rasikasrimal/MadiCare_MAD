@@ -3,8 +3,10 @@ import 'package:medicare/constants/colors.dart';
 
 class MainTextButton extends StatelessWidget {
   final String text;
+  final void Function()? onPressed;
 
-  const MainTextButton({Key? key, required this.text}) : super(key: key);
+  const MainTextButton({Key? key, required this.text, this.onPressed})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class MainTextButton extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(text),
       ),
     );
