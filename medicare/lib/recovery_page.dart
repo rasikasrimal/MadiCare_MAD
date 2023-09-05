@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key});
+class PasswordRecoveryPage extends StatelessWidget {
+  const PasswordRecoveryPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign Up'),
+        title: Text('Password Recovery'),
       ),
       body: Center(
         child: Padding(
@@ -16,28 +16,21 @@ class SignUpPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'Create a new account',
+                'Enter your email to recover your password',
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 16),
               TextField(
                 decoration: InputDecoration(
-                  labelText: 'Username',
-                ),
-              ),
-              SizedBox(height: 16),
-              TextField(
-                obscureText: true, // Passwords are hidden
-                decoration: InputDecoration(
-                  labelText: 'Password',
+                  labelText: 'Email',
                 ),
               ),
               SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
-                  // Add your sign-up logic here
+                  // Add your password recovery logic here
                 },
-                child: Text('Sign Up'),
+                child: Text('Recover Password'),
               ),
             ],
           ),
