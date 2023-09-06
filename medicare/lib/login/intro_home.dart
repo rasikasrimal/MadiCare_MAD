@@ -4,6 +4,7 @@ import 'package:medicare/login/signup_page.dart';
 import 'package:medicare/profile/mainapp.dart';
 import 'package:medicare/text_buttons/main_text_button.dart';
 import 'package:medicare/login/login_page.dart';
+import 'package:medicare/appointment/calender.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key});
@@ -53,16 +54,50 @@ class Home extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 30),
-              MainTextButton(
-                  text: 'Profile - Azam',
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              const MainApp()), //here is it correct
-                    );
-                  }),
+              //
+              //
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MainApp(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  'Profile - Azam',
+                  style: TextStyle(
+                    color: Colors.red, // Set your desired text color
+                    fontSize: 20, // Set your desired font size
+                    fontWeight: FontWeight.bold, // Set your desired font weight
+                  ),
+                ),
+              ),
+              //
+              //
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CalendarPage(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  'Appointment - Sachin',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+
+//
+//
+
               const SizedBox(height: 30),
             ],
           ),

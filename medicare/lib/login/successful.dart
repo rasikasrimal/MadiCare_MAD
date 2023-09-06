@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/text_buttons/main_text_button.dart'; // Import your custom MainTextButton
 import 'package:medicare/login/intro_home.dart'; // Import your Home page
-import 'package:medicare/welcome/welcome.dart';
+//import 'package:medicare/welcome/welcome.dart';
 
 class RegistrationSuccessfulPage extends StatelessWidget {
   const RegistrationSuccessfulPage({Key? key});
