@@ -12,7 +12,11 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+<<<<<<< HEAD
+        title: const Text('Login'), // Add an app bar with a title
+=======
         title: const Text('Login'),
+>>>>>>> 08e5f0ae03958f56706a03f026f98bf452fda171
       ),
       body: Center(
         child: Padding(
@@ -21,6 +25,26 @@ class Login extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
+<<<<<<< HEAD
+              const TextField(
+                decoration: InputDecoration(
+                  labelText: 'Username',
+                ),
+              ),
+              const SizedBox(height: 16),
+              const TextField(
+                obscureText: true, // Passwords are hidden
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                ),
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () {
+                  // Add your login logic here
+                },
+                child: const Text('Login'),
+=======
               const UsernamePasswordInput(
                 hintText: 'Username',
               ),
@@ -30,6 +54,7 @@ class Login extends StatelessWidget {
               const UsernamePasswordInput(
                 hintText: 'Password',
                 obscureText: true,
+>>>>>>> 08e5f0ae03958f56706a03f026f98bf452fda171
               ),
 
               const SizedBox(height: 24), // Spacing
@@ -44,6 +69,14 @@ class Login extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
+<<<<<<< HEAD
+                        builder: (context) => const PasswordRecoveryPage()),
+                  );
+                },
+                child: const Text('Forgot Password?'),
+              ),
+              const SizedBox(height: 16),
+=======
                       builder: (context) => const PasswordRecoveryPage(),
                     ),
                   );
@@ -61,10 +94,17 @@ class Login extends StatelessWidget {
               const SizedBox(height: 10), // Spacing
 
               // Don't have an account? sign up
+>>>>>>> 08e5f0ae03958f56706a03f026f98bf452fda171
               TextButton(
                 onPressed: () {
                   Navigator.push(
                     context,
+<<<<<<< HEAD
+                    MaterialPageRoute(builder: (context) => const SignUpPage()),
+                  );
+                },
+                child: const Text("Don't have an account? Sign Up"),
+=======
                     MaterialPageRoute(
                       builder: (context) => const SignUpPage(),
                     ),
@@ -78,6 +118,7 @@ class Login extends StatelessWidget {
                     fontSize: 16,
                   ),
                 ),
+>>>>>>> 08e5f0ae03958f56706a03f026f98bf452fda171
               ),
             ],
           ),
