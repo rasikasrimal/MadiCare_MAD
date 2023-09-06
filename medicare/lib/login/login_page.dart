@@ -4,6 +4,7 @@ import 'package:medicare/constants/colors.dart';
 import 'package:medicare/text_buttons/username_pass.dart';
 import 'package:medicare/login/recovery_page.dart';
 import 'package:medicare/login/signup_page.dart';
+import 'package:medicare/welcome/welcome.dart'; // Import the WelcomePage
 
 class Login extends StatelessWidget {
   const Login({Key? key});
@@ -34,7 +35,18 @@ class Login extends StatelessWidget {
 
               const SizedBox(height: 24), // Spacing
 
-              MainTextButton(text: 'Login', onPressed: () {}),
+              MainTextButton(
+                text: 'Login',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          const WelcomePage(), // Navigate to WelcomePage
+                    ),
+                  );
+                },
+              ),
 
               const SizedBox(height: 16), // Spacing
 
