@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:medicare/text_buttons/main_text_button.dart';
 import 'recovery_page.dart';
 import 'signup_page.dart';
+import 'package:medicare/constants/colors.dart';
+import 'package:medicare/text_buttons/username_pass.dart'; // Corrected import statement
 
 class Login extends StatelessWidget {
   const Login({Key? key});
@@ -9,7 +12,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'), // Add an app bar with a title
+        title: const Text('Login'),
       ),
       body: Center(
         child: Padding(
@@ -18,46 +21,63 @@ class Login extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Username',
-                ),
+              const UsernamePasswordInput(
+                hintText: 'Username',
               ),
-              SizedBox(height: 16),
-              TextField(
-                obscureText: true, // Passwords are hidden
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                ),
+
+              const SizedBox(height: 16),
+
+              const UsernamePasswordInput(
+                hintText: 'Password',
+                obscureText: true,
               ),
-              SizedBox(height: 16),
-              ElevatedButton(
-                onPressed: () {
-                  // Add your login logic here
-                },
-                child: Text('Login'),
-              ),
+
+              const SizedBox(height: 24), // Spacing
+
+              MainTextButton(text: 'Login', onPressed: () {}),
+
+              const SizedBox(height: 16), // Spacing
+
+              // Password recovery button
               TextButton(
                 onPressed: () {
-                  // Navigate to password recovery page
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => PasswordRecoveryPage()),
+                      builder: (context) => const PasswordRecoveryPage(),
+                    ),
                   );
                 },
-                child: Text('Forgot Password?'),
+                child: const Text(
+                  'Forgot Password?',
+                  style: TextStyle(
+                    color: mainColor,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
               ),
-              SizedBox(height: 16),
+
+              const SizedBox(height: 10), // Spacing
+
+              // Don't have an account? sign up
               TextButton(
                 onPressed: () {
-                  // Navigate to sign-up page
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignUpPage()),
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpPage(),
+                    ),
                   );
                 },
-                child: Text("Don't have an account? Sign Up"),
+                child: const Text(
+                  "Don't have an account? Sign Up",
+                  style: TextStyle(
+                    color: mainColor,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
               ),
             ],
           ),
