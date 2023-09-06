@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicare/intro_home.dart';
+import 'package:medicare/login/intro_home.dart';
 
 void main() {
   runApp(MyApp());

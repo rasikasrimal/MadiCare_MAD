@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
-import 'package:medicare/signup_page.dart';
+import 'package:medicare/login/signup_page.dart';
 import 'package:medicare/text_buttons/main_text_button.dart';
-import 'package:medicare/login_page.dart';
+import 'package:medicare/login/login_page.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key});

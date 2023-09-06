@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/text_buttons/main_text_button.dart';
-import 'recovery_page.dart';
-import 'signup_page.dart';
 import 'package:medicare/constants/colors.dart';
-import 'package:medicare/text_buttons/username_pass.dart'; // Corrected import statement
+import 'package:medicare/text_buttons/username_pass.dart';
+import 'package:medicare/login/recovery_page.dart';
+import 'package:medicare/login/signup_page.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key});
