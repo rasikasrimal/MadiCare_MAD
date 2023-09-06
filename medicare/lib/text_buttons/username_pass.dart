@@ -48,6 +48,11 @@ class _UsernamePasswordInputState extends State<UsernamePasswordInput> {
               Icons.person,
               color: Colors.white,
             ),
+          if (widget.hintText == 'email')
+            const Icon(
+              Icons.person,
+              color: Colors.white,
+            ),
           const SizedBox(width: 10),
           Expanded(
             child: TextField(
