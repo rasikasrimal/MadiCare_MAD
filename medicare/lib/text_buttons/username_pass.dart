@@ -38,17 +38,15 @@ class _UsernamePasswordInputState extends State<UsernamePasswordInput> {
       ),
       child: Row(
         children: [
-          if (widget.hintText == 'Password')
+          if (widget.hintText == 'Password' ||
+              widget.hintText ==
+                  'Re-Enter Your Password') // Corrected condition
             const Icon(
               Icons.lock,
               color: Colors.white,
             ),
-          if (widget.hintText == 'Username')
-            const Icon(
-              Icons.person,
-              color: Colors.white,
-            ),
-          if (widget.hintText == 'email')
+          if (widget.hintText == 'Username' ||
+              widget.hintText == 'email') // Corrected condition
             const Icon(
               Icons.person,
               color: Colors.white,
@@ -66,7 +64,10 @@ class _UsernamePasswordInputState extends State<UsernamePasswordInput> {
                   fontSize: 20,
                 ),
                 border: InputBorder.none,
-                suffixIcon: widget.obscureText && widget.hintText == 'Password'
+                suffixIcon: (widget.obscureText &&
+                        (widget.hintText == 'Password' ||
+                            widget.hintText ==
+                                'Re-Enter Your Password')) // Corrected condition
                     ? IconButton(
                         onPressed: () {
                           setState(() {
