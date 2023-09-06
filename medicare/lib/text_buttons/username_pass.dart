@@ -36,32 +36,53 @@ class _UsernamePasswordInputState extends State<UsernamePasswordInput> {
         borderRadius: BorderRadius.circular(100),
         color: mainColor,
       ),
-      child: TextField(
-        controller: _textEditingController,
-        obscureText: _obscureText,
-        decoration: InputDecoration(
-          hintText: widget.hintText,
-          hintStyle: const TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w300,
-            fontSize: 20,
-          ),
-          border: InputBorder.none,
-          suffixIcon: IconButton(
-            onPressed: () {
-              setState(() {
-                _obscureText = !_obscureText;
-              });
-            },
-            icon: Icon(
-              _obscureText ? Icons.visibility : Icons.visibility_off,
+      child: Row(
+        children: [
+          if (widget.hintText == 'Password')
+            const Icon(
+              Icons.lock,
               color: Colors.white,
             ),
+          if (widget.hintText == 'Username')
+            const Icon(
+              Icons.person,
+              color: Colors.white,
+            ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: TextField(
+              controller: _textEditingController,
+              obscureText: _obscureText,
+              decoration: InputDecoration(
+                hintText: widget.hintText,
+                hintStyle: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 20,
+                ),
+                border: InputBorder.none,
+                suffixIcon: widget.obscureText && widget.hintText == 'Password'
+                    ? IconButton(
+                        onPressed: () {
+                          setState(() {
+                            _obscureText = !_obscureText;
+                          });
+                        },
+                        icon: Icon(
+                          _obscureText
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          color: Colors.white,
+                        ),
+                      )
+                    : null,
+              ),
+              textAlignVertical: TextAlignVertical.center,
+              textAlign: TextAlign.center,
+              style: const TextStyle(color: Colors.white),
+            ),
           ),
-        ),
-        textAlignVertical: TextAlignVertical.center,
-        textAlign: TextAlign.center,
-        style: const TextStyle(color: Colors.white),
+        ],
       ),
     );
   }
