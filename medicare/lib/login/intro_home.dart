@@ -54,8 +54,11 @@ class Home extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 30),
-              //
-              //
+//
+//
+//
+//
+//
               TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -68,14 +71,13 @@ class Home extends StatelessWidget {
                 child: const Text(
                   'Profile - Azam',
                   style: TextStyle(
-                    color: Colors.red, // Set your desired text color
-                    fontSize: 20, // Set your desired font size
-                    fontWeight: FontWeight.bold, // Set your desired font weight
+                    color: Colors.red,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-              //
-              //
+//
               TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -94,10 +96,11 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-
 //
 //
-
+//
+//
+//
               const SizedBox(height: 30),
             ],
           ),

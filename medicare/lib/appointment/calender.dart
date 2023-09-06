@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart'
-    show CalendarCarousel;
+import 'package:medicare/appointment/Appointment.dart';
 
 class CalendarPage extends StatefulWidget {
   const CalendarPage({Key? key}) : super(key: key);
@@ -28,15 +27,6 @@ class _CalendarPageState extends State<CalendarPage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             const Text('Select appointment date'),
-            CalendarCarousel(
-              selectedDateTime: _selectedDate,
-              onDayPressed: (DateTime date, List events) {
-                setState(() {
-                  _selectedDate = date;
-                });
-              },
-              todayButtonColor: Colors.blue,
-            ),
             const SizedBox(height: 16),
             Row(
               children: <Widget>[
@@ -117,7 +107,15 @@ class _CalendarPageState extends State<CalendarPage> {
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
-                // Add your logic to make an appointment here
+                DateTime selectedDate = DateTime(2022, 7,
+                    18); //here i gave hardcoded date time, instead get this value from date picker
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        AppointmentPage(selectedDate: selectedDate),
+                  ),
+                );
               },
               child: const Text('Make Appointment'),
             ),
