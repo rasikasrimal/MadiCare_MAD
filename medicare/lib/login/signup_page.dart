@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/text_buttons/main_text_button.dart';
 import 'package:medicare/text_buttons/username_pass.dart';
+import 'package:medicare/login/successful.dart'; // Import the RegistrationSuccessfulPage
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key});
@@ -80,7 +81,13 @@ class SignUpPage extends StatelessWidget {
               child: MainTextButton(
                 text: 'Create Account',
                 onPressed: () {
-                  // Add your create account logic here
+                  // Navigate to the Registration Successful page
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RegistrationSuccessfulPage(),
+                    ),
+                  );
                 },
               ),
             ),
