@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:profile/pages/Homepage.dart';
-import 'package:profile/pages/ProfilePage.dart';
+import 'package:medicare/profile/pages/Homepage.dart';
+import 'package:medicare/profile/pages/ProfilePage.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+// void main() {
+//   runApp(const MainApp());
+// }
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});

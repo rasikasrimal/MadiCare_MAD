@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/login/signup_page.dart';
+import 'package:medicare/profile/mainapp.dart';
 import 'package:medicare/text_buttons/main_text_button.dart';
 import 'package:medicare/login/login_page.dart';
 
@@ -51,6 +52,17 @@ class Home extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 30),
+              MainTextButton(
+                  text: 'Profile - Azam',
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              const MainApp()), //here is it correct
+                    );
+                  }),
               const SizedBox(height: 30),
             ],
           ),
