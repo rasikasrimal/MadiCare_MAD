@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:profile/pages/Homepage.dart';
+import 'package:profile/pages/ProfilePage.dart';
 
 void main() {
   runApp(const MainApp());
@@ -30,6 +31,7 @@ class _MainPageState extends State<MainPage> {
   // ignore: non_constant_identifier_names
   final screens = [
     const HomePage(),
+    const ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {

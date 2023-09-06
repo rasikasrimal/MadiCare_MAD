@@ -9,7 +9,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'), // Add an app bar with a title
+        title: const Text('Login'), // Add an app bar with a title
       ),
       body: Center(
         child: Padding(
@@ -18,24 +18,24 @@ class Login extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              TextField(
+              const TextField(
                 decoration: InputDecoration(
                   labelText: 'Username',
                 ),
               ),
-              SizedBox(height: 16),
-              TextField(
+              const SizedBox(height: 16),
+              const TextField(
                 obscureText: true, // Passwords are hidden
                 decoration: InputDecoration(
                   labelText: 'Password',
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {
                   // Add your login logic here
                 },
-                child: Text('Login'),
+                child: const Text('Login'),
               ),
               TextButton(
                 onPressed: () {
@@ -43,21 +43,21 @@ class Login extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => PasswordRecoveryPage()),
+                        builder: (context) => const PasswordRecoveryPage()),
                   );
                 },
-                child: Text('Forgot Password?'),
+                child: const Text('Forgot Password?'),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextButton(
                 onPressed: () {
                   // Navigate to sign-up page
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignUpPage()),
+                    MaterialPageRoute(builder: (context) => const SignUpPage()),
                   );
                 },
-                child: Text("Don't have an account? Sign Up"),
+                child: const Text("Don't have an account? Sign Up"),
               ),
             ],
           ),
