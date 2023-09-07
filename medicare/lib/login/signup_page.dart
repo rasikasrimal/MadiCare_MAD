@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/text_buttons/main_text_button.dart';
 import 'package:medicare/text_buttons/username_pass.dart';
-import 'package:medicare/login/successful.dart'; // Import the RegistrationSuccessfulPage
+import 'package:medicare/login/successful.dart';
+import 'package:medicare/constants/appbar.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key});
@@ -12,9 +13,10 @@ class SignUpPage extends StatelessWidget {
     const double containerPadding = 16.0; // Define the padding amount
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Sign Up'),
-      ),
+      appBar: MyAppBar('Sign Up'),
+      backgroundColor: Colors.white,
+//
+//
       body: Column(
         children: <Widget>[
           Container(

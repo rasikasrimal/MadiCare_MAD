@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/text_buttons/username_pass.dart';
+import 'package:medicare/constants/appbar.dart';
 
 class PasswordRecoveryPage extends StatelessWidget {
   const PasswordRecoveryPage({Key? key});
@@ -8,9 +9,10 @@ class PasswordRecoveryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Password Recovery'),
-      ),
+      appBar: MyAppBar('Account Recovery'),
+      backgroundColor: Colors.white,
+//
+//
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),

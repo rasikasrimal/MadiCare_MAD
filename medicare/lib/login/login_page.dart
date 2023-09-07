@@ -4,7 +4,8 @@ import 'package:medicare/constants/colors.dart';
 import 'package:medicare/text_buttons/username_pass.dart';
 import 'package:medicare/login/recovery_page.dart';
 import 'package:medicare/login/signup_page.dart';
-import 'package:medicare/welcome/welcome.dart'; // Import the WelcomePage
+import 'package:medicare/welcome/welcome.dart';
+import 'package:medicare/constants/appbar.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key});
@@ -12,9 +13,10 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login'),
-      ),
+      appBar: MyAppBar('Login'),
+      backgroundColor: Colors.white,
+//
+//
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),

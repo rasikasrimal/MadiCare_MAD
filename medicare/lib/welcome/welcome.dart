@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicare/constants/appbar.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key});
@@ -6,9 +7,10 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Welcome'),
-      ),
+      appBar: MyAppBar('Login'),
+      backgroundColor: Colors.white,
+//
+//
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

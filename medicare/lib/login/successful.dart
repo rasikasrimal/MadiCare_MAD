@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
-import 'package:medicare/text_buttons/main_text_button.dart'; // Import your custom MainTextButton
-import 'package:medicare/login/intro_home.dart'; // Import your Home page
-//import 'package:medicare/welcome/welcome.dart';
+import 'package:medicare/text_buttons/main_text_button.dart';
+import 'package:medicare/login/intro_home.dart';
+import 'package:medicare/constants/appbar.dart';
 
 class RegistrationSuccessfulPage extends StatelessWidget {
   const RegistrationSuccessfulPage({Key? key});
@@ -10,9 +10,10 @@ class RegistrationSuccessfulPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Registration Successful'),
-      ),
+      appBar: MyAppBar('Resgistration Successful'),
+      backgroundColor: Colors.white,
+//
+//
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
