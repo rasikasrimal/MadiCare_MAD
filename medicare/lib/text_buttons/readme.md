@@ -76,5 +76,3 @@ class UsernamePasswordInput extends StatefulWidget {
 These reusable widgets help maintain a clean and organized codebase, improve code reusability, and ensure a consistent user experience throughout your Flutter application.
 
 
-This format should display code snippets properly within your `readme.md` file on GitHub.
-
