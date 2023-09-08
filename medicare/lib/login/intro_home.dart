@@ -5,6 +5,7 @@ import 'package:medicare/profile/mainapp.dart';
 import 'package:medicare/text_buttons/main_text_button.dart';
 import 'package:medicare/login/login_page.dart';
 import 'package:medicare/appointment/calender.dart';
+import 'package:medicare/welcome/welcome.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key});
@@ -53,7 +54,7 @@ class Home extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 10),
 //
 //
 //
@@ -98,6 +99,24 @@ class Home extends StatelessWidget {
               ),
 //
 //
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const WelcomePage(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  'Welcome Page - Rowzy',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
 //
 //
 //
