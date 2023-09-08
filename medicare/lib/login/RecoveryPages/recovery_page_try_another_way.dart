@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
-import 'package:medicare/text_buttons/username_pass.dart';
+import 'package:medicare/constants/text_buttons/username_pass.dart';
 import 'package:medicare/constants/appbar.dart';
 import 'package:medicare/login/RecoveryPages/recovery_page_couldnt_you_sign_in.dart';
 

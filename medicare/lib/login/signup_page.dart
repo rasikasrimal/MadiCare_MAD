@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
-import 'package:medicare/text_buttons/main_text_button.dart';
-import 'package:medicare/text_buttons/username_pass.dart';
+import 'package:medicare/constants/text_buttons/main_text_button.dart';
+import 'package:medicare/constants/text_buttons/username_pass.dart';
 import 'package:medicare/login/successful.dart';
 import 'package:medicare/constants/appbar.dart';
 
