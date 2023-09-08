@@ -11,5 +11,6 @@ AppBar MyAppBar(String title) {
         color: mainColor,
       ),
     ),
+    automaticallyImplyLeading: true,
   );
 }

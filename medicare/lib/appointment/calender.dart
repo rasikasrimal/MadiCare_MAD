@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/appointment/Appointment.dart';
+import 'package:medicare/constants/appbar.dart';
 
 class CalendarPage extends StatefulWidget {
   const CalendarPage({Key? key}) : super(key: key);
@@ -18,9 +19,10 @@ class _CalendarPageState extends State<CalendarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Calendar'),
-      ),
+//
+      appBar: MyAppBar('Make Appointment'),
+      backgroundColor: Colors.white,
+//
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

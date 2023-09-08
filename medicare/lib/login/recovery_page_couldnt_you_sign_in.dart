@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/text_buttons/username_pass.dart';
 import 'package:medicare/constants/appbar.dart';
-import 'package:medicare/login/recovery_page_try_another_way.dart';
+import 'package:medicare/login/intro_home.dart';
 
-class PasswordRecoveryPage extends StatelessWidget {
-  const PasswordRecoveryPage({Key? key});
+class PasswordRecoveryPageCSI extends StatelessWidget {
+  const PasswordRecoveryPageCSI({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class PasswordRecoveryPage extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Text(
-                'To help keep your account safe, We wants to make sure it’s really you trying to sign in',
+                'You didn’t provide enough info for Google to be sure this account is really yours. Google asks for this info to keep your account secure.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
@@ -41,6 +41,22 @@ class PasswordRecoveryPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
+//
+//
+              const Text(
+                '\u2022 Use a device where you’ve signed in before\n'
+                '\u2022 Use a familiar Wi-Fi network, such as at home or work',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'Helvetica',
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+
+//
+//
+              const SizedBox(height: 20),
               const UsernamePasswordInput(
                 hintText: 'Email',
               ),
@@ -48,38 +64,26 @@ class PasswordRecoveryPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TextButton(
+                  const Spacer(),
+                  ElevatedButton(
 //
 //
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const PasswordRecoveryPageTAW(),
+                          builder: (context) => const Home(),
                         ),
                       );
                     },
 //
 //
-                    child: const Text(
-                      'Try Another Way',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        fontFamily: 'Helvetica',
-                        color: mainColor,
-                      ),
-                    ),
-                  ),
-                  const Spacer(),
-                  ElevatedButton(
-                    onPressed: () {},
                     style: ElevatedButton.styleFrom(
                         backgroundColor: mainColor,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(100))),
                     child: const Text(
-                      'Next',
+                      'Try Again',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,

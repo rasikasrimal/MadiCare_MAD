@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/text_buttons/username_pass.dart';
 import 'package:medicare/constants/appbar.dart';
-import 'package:medicare/login/recovery_page_try_another_way.dart';
+import 'package:medicare/login/recovery_page_couldnt_you_sign_in.dart';
 
-class PasswordRecoveryPage extends StatelessWidget {
-  const PasswordRecoveryPage({Key? key});
+class PasswordRecoveryPageTAW extends StatelessWidget {
+  const PasswordRecoveryPageTAW({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +41,18 @@ class PasswordRecoveryPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
+              const Text(
+                'Confirm the phone number you provided in your security settings',
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'Helvetica',
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              const SizedBox(height: 20),
               const UsernamePasswordInput(
-                hintText: 'Email',
+                hintText: 'Phone Number',
               ),
               const SizedBox(height: 16),
               Row(
@@ -55,7 +65,7 @@ class PasswordRecoveryPage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const PasswordRecoveryPageTAW(),
+                          builder: (context) => const PasswordRecoveryPageCSI(),
                         ),
                       );
                     },
@@ -73,7 +83,18 @@ class PasswordRecoveryPage extends StatelessWidget {
                   ),
                   const Spacer(),
                   ElevatedButton(
-                    onPressed: () {},
+//
+//
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PasswordRecoveryPageTAW(),
+                        ),
+                      );
+                    },
+//
+//
                     style: ElevatedButton.styleFrom(
                         backgroundColor: mainColor,
                         shape: RoundedRectangleBorder(
