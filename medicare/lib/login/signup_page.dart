@@ -24,7 +24,7 @@ class SignUpPage extends StatelessWidget {
             decoration: const BoxDecoration(
               color: mainColor,
             ),
-            child: Padding(
+            child: const Padding(
               padding: const EdgeInsets.all(20),
               child: Text(
                 'Registration',
@@ -39,35 +39,35 @@ class SignUpPage extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          Expanded(
+          const Expanded(
             child: Padding(
-              padding: const EdgeInsets.symmetric(
+              padding: EdgeInsets.symmetric(
                   horizontal: containerPadding), // Apply padding
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
-                    const UsernamePasswordInput(
+                    UsernamePasswordInput(
                       hintText: 'Enter Your Full Name',
                     ),
-                    const SizedBox(height: 10),
-                    const UsernamePasswordInput(
+                    SizedBox(height: 10),
+                    UsernamePasswordInput(
                       hintText: 'Student Email',
                     ),
-                    const SizedBox(height: 10),
-                    const UsernamePasswordInput(
+                    SizedBox(height: 10),
+                    UsernamePasswordInput(
                       hintText: 'Phone Number',
                     ),
-                    const SizedBox(height: 10),
-                    const UsernamePasswordInput(
+                    SizedBox(height: 10),
+                    UsernamePasswordInput(
                       hintText: 'Student ID',
                     ),
-                    const SizedBox(height: 10),
-                    const UsernamePasswordInput(
+                    SizedBox(height: 10),
+                    UsernamePasswordInput(
                       hintText: 'Password',
                       obscureText: true,
                     ),
-                    const SizedBox(height: 10),
-                    const UsernamePasswordInput(
+                    SizedBox(height: 10),
+                    UsernamePasswordInput(
                       hintText: 'Re-Enter Your Password',
                       obscureText: true,
                     ),
@@ -77,7 +77,7 @@ class SignUpPage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(containerPadding), // Apply padding
+            padding: const EdgeInsets.all(containerPadding), // Apply padding
             child: Container(
               width: double.infinity, // Set the width to match "Registration"
               child: MainTextButton(
