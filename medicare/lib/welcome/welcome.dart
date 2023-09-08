@@ -7,7 +7,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar('Login'),
+      appBar: MyAppBar('Welcome'),
       backgroundColor: Colors.white,
 //
 //
@@ -16,7 +16,7 @@ class WelcomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Welcome to Medicare!',
+              'Welcome Page - Rowzy',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -24,10 +24,7 @@ class WelcomePage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {
-                // Add your button logic here
-                // This can be a navigation to the home page
-              },
+              onPressed: () {},
               child: const Text('Get Started'),
             ),
           ],

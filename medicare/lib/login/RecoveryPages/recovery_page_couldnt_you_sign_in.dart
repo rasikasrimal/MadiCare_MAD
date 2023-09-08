@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/constants/appbar.dart';
 import 'package:medicare/login/intro_home.dart';
+import 'package:medicare/help_center/tips.dart';
 
 class PasswordRecoveryPageCSI extends StatelessWidget {
   const PasswordRecoveryPageCSI({Key? key});
@@ -51,7 +52,12 @@ class PasswordRecoveryPageCSI extends StatelessWidget {
               const SizedBox(height: 20),
               TextButton(
                 onPressed: () {
-                  // Add your action here when the button is pressed
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TipsPage(),
+                    ),
+                  );
                 },
                 child: const Text(
                   'More tips to recover your account',

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
-//this is reusable text button can be use everywhere, will update soon to that accept onPressed arguement
 
 class MainTextButton extends StatelessWidget {
   final String text;
