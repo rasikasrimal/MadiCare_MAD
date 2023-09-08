@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/text_buttons/username_pass.dart';
 import 'package:medicare/constants/appbar.dart';
-import 'package:medicare/login/recovery_page_try_another_way.dart';
+import 'package:medicare/login/RecoveryPages/recovery_page_try_another_way.dart';
 
 class PasswordRecoveryPage extends StatelessWidget {
   const PasswordRecoveryPage({Key? key});
