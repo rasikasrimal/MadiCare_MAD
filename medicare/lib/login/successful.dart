@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
-import 'package:medicare/text_buttons/main_text_button.dart';
+import 'package:medicare/constants/text_buttons/main_text_button.dart';
 import 'package:medicare/login/intro_home.dart';
 import 'package:medicare/constants/appbar.dart';
 
