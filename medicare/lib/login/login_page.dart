@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medicare/text_buttons/main_text_button.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/text_buttons/username_pass.dart';
-import 'package:medicare/login/recovery_page.dart';
+import 'package:medicare/login/RecoveryPages/recovery_page.dart';
 import 'package:medicare/login/signup_page.dart';
 import 'package:medicare/welcome/welcome.dart';
 import 'package:medicare/constants/appbar.dart';
