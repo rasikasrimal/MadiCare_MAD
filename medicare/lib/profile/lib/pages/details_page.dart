@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:profile/pages/profile.dart';
+import 'package:medicare/profile/lib/pages/profile.dart';
+//import 'package:profile/pages/profile.dart';
 
 class DetailsPage extends StatelessWidget {
   const DetailsPage({super.key, required this.userprofile});

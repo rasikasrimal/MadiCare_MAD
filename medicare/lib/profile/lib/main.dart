@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:profile/pages/Homepage.dart';
-import 'package:profile/pages/home_page.dart';
+import 'package:medicare/profile/lib/pages/Homepage.dart';
+import 'package:medicare/profile/lib/pages/home_page.dart';
+//import 'package:profile/pages/Homepage.dart';
+//import 'package:profile/pages/home_page.dart';
 
 void main() {
   runApp(const MainApp());
