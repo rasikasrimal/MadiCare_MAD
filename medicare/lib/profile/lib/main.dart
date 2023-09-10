@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:medicare/profile/pages/Homepage.dart';
-import 'package:medicare/profile/pages/ProfilePage.dart';
+import 'package:profile/pages/Homepage.dart';
+import 'package:profile/pages/home_page.dart';
 
-// void main() {
-//   runApp(const MainApp());
-// }
+void main() {
+  runApp(const MainApp());
+}
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -30,8 +30,8 @@ class _MainPageState extends State<MainPage> {
   int currentPage = 0;
   // ignore: non_constant_identifier_names
   final screens = [
+    const Home(),
     const HomePage(),
-    const ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -59,9 +59,15 @@ class _MainPageState extends State<MainPage> {
                   label: "Home"),
               BottomNavigationBarItem(
                   icon: currentPage == 1
-                      ? const Icon(Icons.view_list, color: Colors.black)
-                      : const Icon(Icons.view_list, color: Colors.brown),
-                  label: "List"),
+                      ? const Icon(
+                          Icons.person,
+                          color: Colors.black,
+                        )
+                      : const Icon(
+                          Icons.person,
+                          color: Colors.brown,
+                        ),
+                  label: "Profile"),
               BottomNavigationBarItem(
                   icon: currentPage == 2
                       ? const Icon(Icons.chat, color: Colors.black)
@@ -74,15 +80,9 @@ class _MainPageState extends State<MainPage> {
                   label: "Calender"),
               BottomNavigationBarItem(
                   icon: currentPage == 4
-                      ? const Icon(
-                          Icons.person,
-                          color: Colors.black,
-                        )
-                      : const Icon(
-                          Icons.person,
-                          color: Colors.brown,
-                        ),
-                  label: "Profile"),
+                      ? const Icon(Icons.view_list, color: Colors.black)
+                      : const Icon(Icons.view_list, color: Colors.brown),
+                  label: "List"),
             ]));
   }
 }
