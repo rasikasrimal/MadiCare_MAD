@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as http;
-import 'package:medicare/profile/lib/pages/profile.dart';
+import 'package:medicare/profile/profile.dart';
+
 // ignore: depend_on_referenced_packages
 //import 'package:profile/pages/profile.dart';
 
