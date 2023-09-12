@@ -5,9 +5,9 @@ import 'package:medicare/profile/profileList_page.dart';
 //import 'package:profile/pages/Homepage.dart';
 //import 'package:profile/pages/home_page.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+// void main() {
+//   runApp(const MainApp());
+// }
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
