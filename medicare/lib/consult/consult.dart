@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-
-
-void main() {
-  runApp(DoctorConsultationApp());
-}
+// void main() {
+//   runApp(DoctorConsultationApp());
+// }
 
 class DoctorConsultationApp extends StatelessWidget {
   @override
@@ -37,7 +35,7 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Implement navigation to doctor list 
+                // Implement navigation to doctor list
               },
               child: Text('Find a Doctor'),
             ),
