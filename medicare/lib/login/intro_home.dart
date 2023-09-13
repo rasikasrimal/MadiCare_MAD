@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
+import 'package:medicare/homepage/homepage.dart';
 import 'package:medicare/login/signup_page.dart';
 import 'package:medicare/profile/mainapp.dart';
 import 'package:medicare/constants/text_buttons/main_text_button.dart';
@@ -110,6 +111,26 @@ class Home extends StatelessWidget {
                 },
                 child: const Text(
                   'Welcome Page - Rowzy',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+//
+//
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomePage(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  'Home_Page - Chethana',
                   style: TextStyle(
                     color: Colors.red,
                     fontSize: 20,

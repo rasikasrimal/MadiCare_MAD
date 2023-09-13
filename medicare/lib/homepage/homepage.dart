@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:Medicare_mad/homepage/blank_page[1].dart';
-import 'blank_page2[1].dart';
-import 'blank_page3[1].dart';
-import 'blue_container.dart';
-import 'blue_column _box[1].dart';
+import 'package:medicare/homepage/blue_container.dart';
+import 'package:medicare/homepage/blank_page_1.dart';
+import 'package:medicare/homepage/blank_page_2.dart';
+import 'package:medicare/homepage/blank_page_3.dart';
+import 'package:medicare/homepage/blue_column_box.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
-
-class MyApp extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
