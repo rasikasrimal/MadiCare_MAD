@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicare/constants/appbar.dart';
 
 // void main() {
 //   runApp(DoctorConsultationApp());
@@ -21,14 +22,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Doctor Consultation'),
-      ),
+//
+//  appbar added, but can't see back button for navigation to the previous page :(
+      appBar: MyAppBar('Consultation Page'),
+      backgroundColor: Colors.white,
+//
+//
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               'Welcome to Doctor Consultation!',
               style: TextStyle(fontSize: 24),
             ),
@@ -37,14 +41,15 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 // Implement navigation to doctor list
               },
-              child: Text('Find a Doctor'),
+              child: const Text('Find a Doctor'),
+              //for these text buttons you can use the text_button1 or 2.dart, need to do few adjustments
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 // Implement Top Rated Doctors
               },
-              child: Text('Top Rated Doctors'),
+              child: const Text('Top Rated Doctors'),
             ),
           ],
         ),
