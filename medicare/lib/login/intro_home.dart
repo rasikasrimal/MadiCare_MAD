@@ -5,7 +5,7 @@ import 'package:medicare/login/signup_page.dart';
 import 'package:medicare/profile/mainapp.dart';
 import 'package:medicare/constants/text_buttons/main_text_button.dart';
 import 'package:medicare/login/login_page.dart';
-import 'package:medicare/appointment/calender.dart';
+import 'package:medicare/appointment/AppointmentPage.dart';
 import 'package:medicare/welcome/welcome.dart';
 import 'package:medicare/consult/consult.dart';
 
