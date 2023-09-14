@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:medicare/constants/appbar.dart';
+import 'package:medicare/constants/colors.dart';
 
 class AppointmentPage extends StatelessWidget {
   final DateTime selectedDate;
@@ -9,21 +11,19 @@ class AppointmentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Appointment'),
-      ),
+      appBar: MyAppBar('Appointment Successful'),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Icon(
               Icons.check_circle,
-              color: Colors.green,
+              color: mainColor,
               size: 100,
             ),
             const SizedBox(height: 20),
             const Text(
-              'Appointment',
+              'Appointment Successful!',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -31,8 +31,11 @@ class AppointmentPage extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             Container(
-              color: Colors.red,
               padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: mainColor,
+                borderRadius: BorderRadius.circular(20),
+              ),
               child: Column(
                 children: <Widget>[
                   const Text(
@@ -53,7 +56,7 @@ class AppointmentPage extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
+            )
           ],
         ),
       ),

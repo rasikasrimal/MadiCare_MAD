@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicare/appointment/Appointment.dart';
+import 'package:medicare/appointment/AppointmentSuccess.dart';
 import 'package:medicare/constants/appbar.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/constants/text_buttons/main_text_button.dart';
