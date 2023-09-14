@@ -4,12 +4,16 @@ class SquareTextButton extends StatelessWidget {
   final Icon icon;
   final String text;
   final Color boxColor;
+  final Color iconColor;
+  final double borderRadius;
 
   const SquareTextButton({
     Key? key,
     required this.icon,
     required this.text,
     required this.boxColor,
+    required this.iconColor,
+    this.borderRadius = 10.0,
   }) : super(key: key);
 
   @override
@@ -20,23 +24,30 @@ class SquareTextButton extends StatelessWidget {
       ),
       onPressed: () {},
       child: Container(
-        width: 100,
-        height: 100,
+        width: 130,
+        height: 130,
         padding: EdgeInsets.all(16.0),
-        color: boxColor,
+        decoration: BoxDecoration(
+          color: boxColor,
+          borderRadius:
+              BorderRadius.circular(borderRadius), // Set the border radius here
+        ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Adjust spacing
-          crossAxisAlignment: CrossAxisAlignment.center, // Center text
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            icon,
+            Icon(
+              icon.icon,
+              color: iconColor,
+            ),
             Text(
               text,
               style: const TextStyle(
-                fontSize: 18, // Increase text size
+                fontSize: 18,
                 color: Colors.white,
-                fontWeight: FontWeight.bold, // Make text bold
+                fontWeight: FontWeight.bold,
               ),
-              textAlign: TextAlign.center, // Center-align the text
+              textAlign: TextAlign.center,
             ),
           ],
         ),
