@@ -1,38 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 
-class BlueContainer extends StatelessWidget {
-  final String title;
+class SquareTextButton extends StatelessWidget {
+  final IconData iconData;
   final String text;
 
-  BlueContainer(this.title, this.text);
+  SquareTextButton(this.iconData, this.text);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 150.0,
-      height: 130.0,
+      height: 140.0,
       decoration: BoxDecoration(
         color: mainColor,
-        borderRadius: BorderRadius.circular(18.0),
+        borderRadius: BorderRadius.circular(20.0),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: EdgeInsets.only(left: 15.0),
-            child: Text(
-              title,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-              ),
+          Container(
+            padding: const EdgeInsets.all(10.0),
+            child: Icon(
+              iconData,
+              color: Colors.white,
+              size: 30.0,
             ),
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 15.0),
+          Container(
+            padding: const EdgeInsets.all(10.0),
             child: Text(
               text,
               style: const TextStyle(

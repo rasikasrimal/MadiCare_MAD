@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/appbar.dart';
 import 'package:medicare/constants/text_buttons/home_page_text_buttons/blue_column_box.dart';
-import 'package:medicare/constants/text_buttons/home_page_text_buttons/blue_container.dart';
+import 'package:medicare/constants/text_buttons/home_page_text_buttons/square_text_button.dart';
 import 'package:medicare/homepage/blank_pages/blank_page_1.dart';
 import 'package:medicare/homepage/blank_pages/blank_page_2.dart';
 import 'package:medicare/homepage/blank_pages/blank_page_3.dart';
@@ -30,7 +30,8 @@ class CHomePage extends StatelessWidget {
                           builder: (context) => BlankPage(),
                         ));
                       },
-                      child: BlueContainer('Clinic', 'Visit'),
+                      child: SquareTextButton(
+                          Icons.local_hospital, 'Clinic Visit'),
                     ),
                     GestureDetector(
                       onTap: () {
@@ -38,7 +39,7 @@ class CHomePage extends StatelessWidget {
                           builder: (context) => BlankPage2(),
                         ));
                       },
-                      child: BlueContainer('Home', 'Visit'),
+                      child: SquareTextButton(Icons.home, 'Home Visit'),
                     ),
                   ],
                 ),
