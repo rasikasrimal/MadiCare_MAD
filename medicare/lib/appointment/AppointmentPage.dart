@@ -3,6 +3,7 @@ import 'package:medicare/appointment/AppointmentSuccess.dart';
 import 'package:medicare/constants/appbar.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/constants/text_buttons/main_text_button.dart';
+import 'package:medicare/appointment/DatePicker.dart';
 
 class CalendarPage extends StatefulWidget {
   const CalendarPage({Key? key}) : super(key: key);
@@ -103,6 +104,8 @@ class _CalendarPageState extends State<CalendarPage> {
                   ],
                 ),
               ),
+              const SizedBox(height: 16),
+              DateTimeWidget(),
               const SizedBox(height: 16),
               Row(
                 children: <Widget>[

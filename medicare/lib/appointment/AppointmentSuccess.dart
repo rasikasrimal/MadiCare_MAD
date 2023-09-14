@@ -48,7 +48,8 @@ class AppointmentPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 10),
                   Text(
-                    '${selectedDate.day.toString()} th ${_getMonth(selectedDate.month)} ${selectedDate.year.toString()}',
+                    _getFormattedDate(
+                        selectedDate), // Display the selected date here
                     style: const TextStyle(
                       fontSize: 20,
                       color: Colors.white,
@@ -63,7 +64,7 @@ class AppointmentPage extends StatelessWidget {
     );
   }
 
-  String _getMonth(int month) {
+  String _getFormattedDate(DateTime date) {
     final monthNames = [
       'January',
       'February',
@@ -78,6 +79,27 @@ class AppointmentPage extends StatelessWidget {
       'November',
       'December'
     ];
-    return monthNames[month - 1];
+    final day = date.day;
+    final month = monthNames[date.month - 1];
+    final year = date.year;
+    final daySuffix = _getDaySuffix(day);
+
+    return '$day$daySuffix $month $year';
+  }
+
+  String _getDaySuffix(int day) {
+    if (day >= 11 && day <= 13) {
+      return 'th';
+    }
+    switch (day % 10) {
+      case 1:
+        return 'st';
+      case 2:
+        return 'nd';
+      case 3:
+        return 'rd';
+      default:
+        return 'th';
+    }
   }
 }
