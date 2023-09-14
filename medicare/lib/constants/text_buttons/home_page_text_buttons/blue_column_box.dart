@@ -3,9 +3,8 @@ import 'package:medicare/constants/colors.dart';
 
 class BlueColumnBox extends StatelessWidget {
   final String title;
-  final String text;
 
-  BlueColumnBox(this.title, this.text);
+  BlueColumnBox(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -18,25 +17,15 @@ class BlueColumnBox extends StatelessWidget {
           color: mainColor,
           borderRadius: BorderRadius.circular(15.0),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              title,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
-              ),
+        child: Center(
+          child: Text(
+            title,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
             ),
-            Text(
-              text,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 16.0,
-              ),
-            ),
-          ],
+          ),
         ),
       ),
     );

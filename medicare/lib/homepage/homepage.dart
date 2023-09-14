@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/appbar.dart';
 import 'package:medicare/constants/text_buttons/home_page_text_buttons/blue_column_box.dart';
 import 'package:medicare/constants/text_buttons/home_page_text_buttons/square_text_button.dart';
-import 'package:medicare/homepage/blank_pages/blank_page_1.dart';
-import 'package:medicare/homepage/blank_pages/blank_page_2.dart';
-import 'package:medicare/homepage/blank_pages/blank_page_3.dart';
+import 'package:medicare/homepage/blank_pages/clinic_visit.dart';
+import 'package:medicare/homepage/blank_pages/home_visit.dart';
+import 'package:medicare/homepage/blank_pages/doctors.dart';
+import '../constants/text_buttons/home_page_text_buttons/information_row.dart';
 
 class CHomePage extends StatelessWidget {
   const CHomePage({Key? key});
@@ -16,9 +17,9 @@ class CHomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         children: <Widget>[
-          SizedBox(height: 16.0),
+          const SizedBox(height: 16.0),
           Padding(
-            padding: EdgeInsets.only(top: 180.0),
+            padding: const EdgeInsets.only(top: 180.0),
             child: Column(
               children: [
                 Row(
@@ -27,66 +28,42 @@ class CHomePage extends StatelessWidget {
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => BlankPage(),
+                          builder: (context) => ClinicVisit(),
                         ));
                       },
-                      child: SquareTextButton(
+                      child: const SquareTextButton(
                           Icons.local_hospital, 'Clinic Visit'),
                     ),
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => BlankPage2(),
+                          builder: (context) => HomeVisit(),
                         ));
                       },
-                      child: SquareTextButton(Icons.home, 'Home Visit'),
+                      child: const SquareTextButton(Icons.home, 'Home Visit'),
                     ),
                   ],
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 Column(
                   children: [
-                    BlueColumnBox('What are the symptoms?', ''),
-                    SizedBox(height: 10.0),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(right: 250.0),
-                          child: Text(
-                            'Temperature',
-                            style: TextStyle(
-                              color: Colors.indigo,
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
-                      ],
+                    BlueColumnBox('What are the symptoms?'),
+                    const SizedBox(height: 10.0),
+                    const InformationRow(
+                      text: 'Temperature',
                     ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(right: 300.0),
-                          child: Text(
-                            'Fever',
-                            style: TextStyle(
-                              color: Colors.indigo,
-                              fontSize: 16.0,
-                            ),
-                          ),
-                        ),
-                      ],
+                    const InformationRow(
+                      text: 'Fever',
                     ),
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => BlankPage3(),
+                          builder: (context) => Doctors(),
                         ));
                       },
                       child: Padding(
-                        padding: EdgeInsets.only(top: 20.0),
-                        child: BlueColumnBox('Popular doctors', ''),
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: BlueColumnBox('Popular doctors'),
                       ),
                     ),
                   ],

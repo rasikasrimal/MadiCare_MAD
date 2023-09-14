@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:medicare/constants/appbar.dart';
 
-class BlankPage extends StatelessWidget {
+class ClinicVisit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Blank Page'),
-      ),
+      appBar: MyAppBar('Clinic Visit'),
       body: const Center(
         child: Text('This is a blank page.'),
       ),
