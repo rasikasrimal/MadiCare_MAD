@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
+import 'package:medicare/homepage/homepage.dart';
 import 'package:medicare/login/signup_page.dart';
 import 'package:medicare/profile/mainapp.dart';
 import 'package:medicare/constants/text_buttons/main_text_button.dart';
 import 'package:medicare/login/login_page.dart';
 import 'package:medicare/appointment/calender.dart';
 import 'package:medicare/welcome/welcome.dart';
+import 'package:medicare/consult/consult.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key});
@@ -118,6 +120,45 @@ class Home extends StatelessWidget {
                 ),
               ),
 //
+//
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CHomePage(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  'Home Page - Chethana',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+//
+//
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DoctorConsultationApp(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  'Consultant Page - Dilaxana',
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
 //
 //
               const SizedBox(height: 30),
