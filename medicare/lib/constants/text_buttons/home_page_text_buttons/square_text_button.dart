@@ -5,7 +5,7 @@ class SquareTextButton extends StatelessWidget {
   final IconData iconData;
   final String text;
 
-  SquareTextButton(this.iconData, this.text);
+  const SquareTextButton(this.iconData, this.text, {super.key});
 
   @override
   Widget build(BuildContext context) {
