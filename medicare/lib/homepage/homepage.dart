@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/appbar.dart';
 import 'package:medicare/constants/text_buttons/home_page_text_buttons/blue_column_box.dart';
 import 'package:medicare/constants/text_buttons/home_page_text_buttons/square_text_button.dart';
-import 'package:medicare/homepage/blank_pages/clinic_visit.dart';
-import 'package:medicare/homepage/blank_pages/home_visit.dart';
-import 'package:medicare/homepage/blank_pages/doctors.dart';
-import '../constants/text_buttons/home_page_text_buttons/information_row.dart';
+import 'package:medicare/homepage/pages/clinic_visit.dart';
+import 'package:medicare/homepage/pages/home_visit.dart';
+import 'package:medicare/homepage/pages/doctors.dart';
+import 'package:medicare/constants/text_buttons/home_page_text_buttons/information_row.dart';
 
 class CHomePage extends StatelessWidget {
   const CHomePage({Key? key});

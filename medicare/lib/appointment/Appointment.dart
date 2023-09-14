@@ -10,32 +10,32 @@ class AppointmentPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Appointment'),
+        title: const Text('Appointment'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Icon(
+            const Icon(
               Icons.check_circle,
               color: Colors.green,
               size: 100,
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Appointment',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Container(
               color: Colors.red,
               padding: EdgeInsets.all(16),
               child: Column(
                 children: <Widget>[
-                  Text(
+                  const Text(
                     'Date',
                     style: TextStyle(
                       fontSize: 18,
@@ -43,10 +43,10 @@ class AppointmentPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
                     '${selectedDate.day.toString()} th ${_getMonth(selectedDate.month)} ${selectedDate.year.toString()}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                       color: Colors.white,
                     ),

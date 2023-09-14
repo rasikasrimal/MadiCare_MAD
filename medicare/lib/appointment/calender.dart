@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/appointment/Appointment.dart';
 import 'package:medicare/constants/appbar.dart';
+import 'package:medicare/constants/colors.dart';
 
 class CalendarPage extends StatefulWidget {
   const CalendarPage({Key? key}) : super(key: key);
@@ -19,31 +20,109 @@ class _CalendarPageState extends State<CalendarPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-//
       appBar: MyAppBar('Make Appointment'),
       backgroundColor: Colors.white,
-//
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            const Text('Select appointment date'),
-            const SizedBox(height: 16),
-            Row(
-              children: <Widget>[
-                const Text('Upcoming'),
-                Switch(
-                  value: _isUpcoming,
-                  onChanged: (value) {
-                    setState(() {
-                      _isUpcoming = value;
-                    });
-                  },
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Select appointment date',
+                  style: TextStyle(
+                    fontFamily: 'Helvetica',
+                    fontSize: 20.0,
+                    color: mainColor,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-                const Text('Past'),
               ],
             ),
+            const SizedBox(height: 16),
+//
+//
+//
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white, // Default background color
+                border: Border.all(
+                  color: mainColor, // Border color is mainColor
+                  width: 2.0, // Border width
+                ),
+                borderRadius: BorderRadius.circular(
+                    100.0), // Rounded corners for the entire container
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8.0), // Add horizontal padding
+                      child: ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            _isUpcoming =
+                                true; // Set the selection to "Upcoming"
+                          });
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: _isUpcoming
+                              ? mainColor
+                              : Colors.white, // Highlight if selected
+                          onPrimary: _isUpcoming
+                              ? Colors.white
+                              : mainColor, // Text color change
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                                100.0), // Rounded corners for both buttons
+                          ),
+                        ),
+                        child: const Center(
+                          child: Text('Upcoming'),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8.0), // Add horizontal padding
+                      child: ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            _isUpcoming = false; // Set the selection to "Past"
+                          });
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: !_isUpcoming
+                              ? mainColor
+                              : Colors.white, // Highlight if selected
+                          onPrimary: !_isUpcoming
+                              ? Colors.white
+                              : mainColor, // Text color change
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                                100.0), // Rounded corners for both buttons
+                          ),
+                        ),
+                        child: const Center(
+                          child: Text('Past'),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+//
+//
+//
+
             const SizedBox(height: 16),
             Row(
               children: <Widget>[
@@ -109,13 +188,13 @@ class _CalendarPageState extends State<CalendarPage> {
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () {
-                DateTime selectedDate = DateTime(2022, 7,
-                    18); //here i gave hardcoded date time, instead get this value from date picker
+                // Use the selected date from a date picker
+                // DateTime selectedDate = _selectedDateFromDatePicker();
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) =>
-                        AppointmentPage(selectedDate: selectedDate),
+                        AppointmentPage(selectedDate: _selectedDate),
                   ),
                 );
               },

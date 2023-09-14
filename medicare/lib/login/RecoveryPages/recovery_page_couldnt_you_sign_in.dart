@@ -30,7 +30,7 @@ class PasswordRecoveryPageCSI extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Text(
-                'You didn’t provide enough info for Us to be sure this account is really yours. Google asks for this info to keep your account secure.',
+                'You didn’t provide enough info for Us to be sure this account is really yours. We asks for this info to keep your account secure.',
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   fontSize: 20,
