@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicare/constants/colors.dart';
 
 class BlueContainer extends StatelessWidget {
   final String title;
@@ -12,7 +13,7 @@ class BlueContainer extends StatelessWidget {
       width: 150.0,
       height: 130.0,
       decoration: BoxDecoration(
-        color: Colors.indigo,
+        color: mainColor,
         borderRadius: BorderRadius.circular(18.0),
       ),
       child: Column(

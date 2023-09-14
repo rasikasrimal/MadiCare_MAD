@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medicare/constants/colors.dart';
 
 class BlueColumnBox extends StatelessWidget {
   final String title;
@@ -14,12 +15,11 @@ class BlueColumnBox extends StatelessWidget {
         width: 340.0,
         height: 50.0,
         decoration: BoxDecoration(
-          color: Colors.indigo,
+          color: mainColor,
           borderRadius: BorderRadius.circular(15.0),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-
           children: [
             Text(
               title,
@@ -37,9 +37,6 @@ class BlueColumnBox extends StatelessWidget {
               ),
             ),
           ],
-
-
-
         ),
       ),
     );
