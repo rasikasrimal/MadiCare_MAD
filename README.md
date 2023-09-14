@@ -102,7 +102,7 @@ Investing in this healthcare app fosters a healthier, happier, and more successf
 | Dilaxsana Gunaseelan | 22218      | BSc Software Engineering (UGC)  | DilaxsanaG      | Consult Page                 |
 | WSM Dilshan          | 22870      | BSc Software Engineering (UGC)  | wsmdilshan      | Appointment Page             |
 | KDNL Kandanaarachchi | 22864      | BSc Software Engineering (UGC)  | naveenlanka2000 | Prototype Design Figma, UI/UX|
-| ABC                  | 22000      | BSc Software Engineering (UGC)  | abcde4          |                              |
+| MRR.SAKKY            | 23309      | BSc Software Engineering (UGC)  | Rowzysakky      |    Welcome page              |
 
 
 
