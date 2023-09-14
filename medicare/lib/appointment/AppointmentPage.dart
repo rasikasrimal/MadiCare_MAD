@@ -13,7 +13,7 @@ class CalendarPage extends StatefulWidget {
 }
 
 class _CalendarPageState extends State<CalendarPage> {
-  final DateTime _selectedDate = DateTime.now();
+  DateTime _selectedDate = DateTime.now();
   String _selectedTime = '09:30 AM';
   String _selectedDoctor = 'John';
   bool _isUpcoming = true;
@@ -22,7 +22,6 @@ class _CalendarPageState extends State<CalendarPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MyAppBar('Make Appointment'),
-      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -44,14 +43,15 @@ class _CalendarPageState extends State<CalendarPage> {
                 ],
               ),
               const SizedBox(height: 16),
+
+              // Upcoming, Past
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
                   border: Border.all(
                     color: mainColor,
-                    width: 2.0,
+                    width: 3.0,
                   ),
-                  borderRadius: BorderRadius.circular(100.0),
+                  borderRadius: BorderRadius.circular(30.0),
                 ),
                 child: Row(
                   children: [
@@ -105,68 +105,152 @@ class _CalendarPageState extends State<CalendarPage> {
                 ),
               ),
               const SizedBox(height: 16),
-              DateTimeWidget(),
-              const SizedBox(height: 16),
-              Row(
-                children: <Widget>[
-                  const Text('Choose time: '),
-                  DropdownButton<String>(
-                    value: _selectedTime,
-                    onChanged: (value) {
-                      setState(() {
-                        _selectedTime = value!;
-                      });
-                    },
-                    items: <String>[
-                      '09:30 AM',
-                      '10:30 AM',
-                      '11:00 AM',
-                      '11:30 AM',
-                      '12:00 PM',
-                      '12:30 PM',
-                    ].map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 16),
-              Row(
-                children: <Widget>[
-                  const Text('Choose doctor: '),
-                  DropdownButton<String>(
-                    value: _selectedDoctor,
-                    onChanged: (value) {
-                      setState(() {
-                        _selectedDoctor = value!;
-                      });
-                    },
-                    items: <String>[
-                      'John',
-                      'Alan',
-                      'David',
-                    ].map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 16),
-              TextField(
-                onChanged: (value) {
-                  setState(() {});
+
+              // Date Picker
+              DateTimeWidget(
+                onDateSelected: (selectedDate) {
+                  setState(() {
+                    _selectedDate = selectedDate;
+                  });
                 },
-                decoration: const InputDecoration(
-                  labelText: 'Purpose',
+              ),
+              const SizedBox(height: 16),
+
+// Choose Time and Choose Doctor (drop-down menu) sections
+              Container(
+                height: 400, // Set your desired height here
+                decoration: BoxDecoration(
+                  color: mainColor, // Set the background color to mainColor
+                  borderRadius: BorderRadius.circular(40.0),
+                ),
+                child: Column(
+                  children: [
+                    Column(
+                      children: <Widget>[
+                        const Padding(
+                          // Add left and top padding
+                          padding: EdgeInsets.only(left: 43.0, top: 20.0),
+                          child: Align(
+                            // Align the "Time" text to the left
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              'Time',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        //
+                        // Time Slots
+                        //
+                        Center(
+                          child: Column(
+                            children: <Widget>[
+                              Center(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    _buildTimeSlot('09:30 AM',
+                                        _selectedTime == '09:30 AM'),
+                                    _buildTimeSlot('10:30 AM',
+                                        _selectedTime == '10:30 AM'),
+                                    _buildTimeSlot('11:00 AM',
+                                        _selectedTime == '11:00 AM'),
+                                  ],
+                                ),
+                              ),
+                              Center(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    _buildTimeSlot('11:30 AM',
+                                        _selectedTime == '11:30 AM'),
+                                    _buildTimeSlot('12:00 PM',
+                                        _selectedTime == '12:00 PM'),
+                                    _buildTimeSlot('12:30 PM',
+                                        _selectedTime == '12:30 PM'),
+                                  ],
+                                ),
+                              ),
+                              //
+                              //
+                              //
+                            ],
+                          ),
+                        )
+                        //
+                        //
+                        //
+                      ],
+                    ),
+
+                    SizedBox(height: 10),
+//
+//
+//
+                    // Choose Doctor (drop-down menu)
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(20.0),
+                          bottomRight: Radius.circular(20.0),
+                        ),
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          const SizedBox(height: 16),
+                          Row(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 40.0,
+                                    top: 8.0), // Add left and top padding
+                                child: const Text(
+                                  'Doctor',
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              const Spacer(),
+                              DropdownButton<String>(
+                                value: _selectedDoctor,
+                                onChanged: (value) {
+                                  setState(() {
+                                    _selectedDoctor = value!;
+                                  });
+                                },
+                                items: <String>[
+                                  'John',
+                                  'Alan',
+                                  'David',
+                                ].map<DropdownMenuItem<String>>((String value) {
+                                  return DropdownMenuItem<String>(
+                                    value: value,
+                                    child: Text(value,
+                                        style: TextStyle(color: mainColor)),
+                                  );
+                                }).toList(),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    //
+                    //
+                    //
+                  ],
                 ),
               ),
-              const SizedBox(height: 24),
+
+              // Make Appointment
               MainTextButton(
                 text: 'Make Appointment',
                 onPressed: () {
@@ -185,4 +269,26 @@ class _CalendarPageState extends State<CalendarPage> {
       ),
     );
   }
+}
+
+Widget _buildTimeSlot(String time, bool isSelected) {
+  return Container(
+    margin: const EdgeInsets.all(8.0),
+    padding: const EdgeInsets.all(8.0),
+    decoration: BoxDecoration(
+      border: Border.all(
+        color: isSelected
+            ? Colors.yellow
+            : Colors.transparent, // Border color changes for the selected slot
+        width: 2.0, // Border width for all slots
+      ),
+      borderRadius: BorderRadius.circular(8.0),
+    ),
+    child: Text(
+      time,
+      style: TextStyle(
+        color: isSelected ? Colors.yellow : Colors.white,
+      ),
+    ),
+  );
 }

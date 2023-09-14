@@ -3,7 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:medicare/constants/colors.dart';
 
 class DateTimeWidget extends StatefulWidget {
-  const DateTimeWidget({Key? key}) : super(key: key);
+  const DateTimeWidget(
+      {Key? key, required Null Function(dynamic selectedDate) onDateSelected})
+      : super(key: key);
 
   @override
   State<DateTimeWidget> createState() => _DateTimeWidgetState();
