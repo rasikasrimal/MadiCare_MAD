@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/constants/appbar.dart';
 import 'package:medicare/login/intro_home.dart';
-import 'package:medicare/help_center/tips.dart';
+import 'package:medicare/login/help_center/tips.dart';
 
 class PasswordRecoveryPageCSI extends StatelessWidget {
   const PasswordRecoveryPageCSI({Key? key});

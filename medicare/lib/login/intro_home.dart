@@ -6,7 +6,8 @@ import 'package:medicare/profile/mainapp.dart';
 import 'package:medicare/constants/text_buttons/main_text_button.dart';
 import 'package:medicare/login/login_page.dart';
 import 'package:medicare/appointment/AppointmentPage.dart';
-import 'package:medicare/welcome/welcome_page.dart';
+// import 'package:medicare/welcome/welcome_page.dart';
+import 'package:medicare/welcome/welcome_old.dart';
 import 'package:medicare/consult/consult.dart';
 
 class Home extends StatelessWidget {
@@ -106,7 +107,8 @@ class Home extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Welcome(),
+                      // builder: (context) => Welcome(),
+                      builder: (context) => WelcomePage(),
                     ),
                   );
                 },
