@@ -16,7 +16,7 @@ class MainTextButton2 extends StatelessWidget {
       child: TextButton(
         style: TextButton.styleFrom(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(100),
+            borderRadius: BorderRadius.circular(18),
           ),
           backgroundColor: mainColor,
           foregroundColor: Colors.white,

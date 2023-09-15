@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
-import 'package:medicare/homepage/homepage.dart';
 import 'package:medicare/login/signup_page.dart';
 import 'package:medicare/profile/mainapp.dart';
 import 'package:medicare/constants/text_buttons/main_text_button.dart';
 import 'package:medicare/login/login_page.dart';
-import 'package:medicare/appointment/AppointmentPage.dart';
-// import 'package:medicare/welcome/welcome_page.dart';
-import 'package:medicare/welcome/welcome.dart';
-import 'package:medicare/consult/consult.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key});
@@ -25,10 +20,10 @@ class Home extends StatelessWidget {
               const Text(
                 'Do you want medical help?',
                 style: TextStyle(
-                  color: blue,
+                  color: mainColor,
                   fontFamily: 'Helvetica',
                   fontSize: 24.0,
-                  fontWeight: FontWeight.w400,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               const SizedBox(height: 30),
@@ -62,7 +57,6 @@ class Home extends StatelessWidget {
 //
 //
 //
-//
               TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -82,88 +76,9 @@ class Home extends StatelessWidget {
                 ),
               ),
 //
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const CalendarPage(),
-                    ),
-                  );
-                },
-                child: const Text(
-                  'Appointment - Sachin',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
 //
 //
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      // builder: (context) => Welcome(),
-                      builder: (context) => WelcomePage(),
-                    ),
-                  );
-                },
-                child: const Text(
-                  'Welcome Page - Rowzy',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
 //
-//
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const CHomePage(),
-                    ),
-                  );
-                },
-                child: const Text(
-                  'Home Page - Chethana',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-//
-//
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => DoctorConsultationApp(),
-                    ),
-                  );
-                },
-                child: const Text(
-                  'Consultant Page - Dilaxana',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-//
-//
-              const SizedBox(height: 30),
             ],
           ),
         ),
