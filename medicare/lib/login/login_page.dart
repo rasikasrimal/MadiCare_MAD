@@ -4,7 +4,7 @@ import 'package:medicare/constants/colors.dart';
 import 'package:medicare/constants/text_buttons/username_pass.dart';
 import 'package:medicare/login/RecoveryPages/recovery_page.dart';
 import 'package:medicare/login/signup_page.dart';
-import 'package:medicare/welcome/welcome.dart';
+import 'package:medicare/welcome/welcome_page.dart';
 import 'package:medicare/constants/appbar.dart';
 
 class Login extends StatelessWidget {
@@ -44,7 +44,7 @@ class Login extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          const WelcomePage(), // Navigate to WelcomePage
+                          WelcomePage(), // Navigate to WelcomePage
                     ),
                   );
                 },
