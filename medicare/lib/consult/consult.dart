@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/appbar.dart';
-
-// void main() {
-//   runApp(DoctorConsultationApp());
-// }
+import 'package:medicare/constants/text_buttons/main_text_button_2.dart';
+import 'package:medicare/consult/Find_Doc_page.dart';
+import 'package:medicare/consult/top_rated_doctors.dart';
 
 class DoctorConsultationApp extends StatelessWidget {
   @override
@@ -37,19 +36,24 @@ class HomePage extends StatelessWidget {
               style: TextStyle(fontSize: 24),
             ),
             SizedBox(height: 20),
-            ElevatedButton(
+            MainTextButton2(
+              text: 'Find a Doctor',
               onPressed: () {
-                // Implement navigation to doctor list
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FindDoctorPage()),
+                );
               },
-              child: const Text('Find a Doctor'),
-              //for these text buttons you can use the text_button1 or 2.dart, need to do few adjustments
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
+            MainTextButton2(
+              text: 'Top Rated Doctors',
               onPressed: () {
-                // Implement Top Rated Doctors
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TopRatedDoctors()),
+                );
               },
-              child: const Text('Top Rated Doctors'),
             ),
           ],
         ),
