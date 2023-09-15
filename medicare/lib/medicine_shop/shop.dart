@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/appbar.dart';
+import 'package:medicare/constants/colors.dart';
 
 class Shop extends StatelessWidget {
   const Shop({Key? key});
@@ -7,25 +8,29 @@ class Shop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar('Welcome'),
+      appBar: MyAppBar('Medicine Shop'),
       backgroundColor: Colors.white,
-//
-//
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'Medical Page - Naveen',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+            Container(
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                color: mainColor,
               ),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Get Started'),
+              child: const Padding(
+                padding: EdgeInsets.all(20),
+                child: Text(
+                  'Medicine Shop',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontFamily: 'Helvetica',
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
             ),
           ],
         ),
