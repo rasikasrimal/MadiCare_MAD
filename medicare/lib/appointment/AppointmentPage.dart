@@ -43,8 +43,6 @@ class _CalendarPageState extends State<CalendarPage> {
                 ],
               ),
               const SizedBox(height: 16),
-
-              // Upcoming, Past
               Container(
                 decoration: BoxDecoration(
                   border: Border.all(
@@ -104,9 +102,7 @@ class _CalendarPageState extends State<CalendarPage> {
                   ],
                 ),
               ),
-              const SizedBox(height: 16),
-
-              // Date Picker
+              const SizedBox(height: 10),
               DateTimeWidget(
                 onDateSelected: (selectedDate) {
                   setState(() {
@@ -114,7 +110,7 @@ class _CalendarPageState extends State<CalendarPage> {
                   });
                 },
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 10),
 
 // Choose Time and Choose Doctor (drop-down menu) sections
               Container(
@@ -129,7 +125,7 @@ class _CalendarPageState extends State<CalendarPage> {
                       children: <Widget>[
                         const Padding(
                           // Add left and top padding
-                          padding: EdgeInsets.only(left: 43.0, top: 20.0),
+                          padding: EdgeInsets.only(left: 40.0, top: 20.0),
                           child: Align(
                             // Align the "Time" text to the left
                             alignment: Alignment.centerLeft,

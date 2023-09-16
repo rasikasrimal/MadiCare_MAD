@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/appbar.dart';
 import 'package:medicare/constants/colors.dart';
 
+import '../welcome/welcome.dart';
+
 class AppointmentPage extends StatelessWidget {
   final DateTime selectedDate;
 
@@ -30,11 +32,23 @@ class AppointmentPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Container(
-              padding: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: mainColor,
-                borderRadius: BorderRadius.circular(20),
+//
+//
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        WelcomePage(), // Replace with your homepage widget
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.all(16),
+                primary: mainColor, // Set the button's background color
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
               ),
               child: Column(
                 children: <Widget>[
@@ -58,6 +72,9 @@ class AppointmentPage extends StatelessWidget {
                 ],
               ),
             )
+
+//
+//
           ],
         ),
       ),
