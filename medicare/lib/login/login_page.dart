@@ -66,7 +66,7 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 10), // Spacing
+              const SizedBox(height: 10),
               TextButton(
                 onPressed: () {
                   Navigator.push(
