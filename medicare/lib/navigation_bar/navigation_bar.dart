@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
+import 'package:medicare/homepage/homepage.dart';
 
+import '../appointment/AppointmentPage.dart';
 import '../profile/mainapp.dart';
 import '../profile/profileList_page.dart';
 import '../welcome/welcome.dart';
@@ -31,18 +33,12 @@ class _BottomNavigationBarExampleState
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     WelcomePage(),
-    Text(
-      'Index 1',
-      style: optionStyle,
-    ),
-    Text(
-      'Appointment Page - Sachin',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2',
-      style: optionStyle,
-    ),
+    // Text(
+    //   'Index 1',
+    //   style: optionStyle,
+    // ),
+    CalendarPage(),
+    CHomePage(),
     ProfileListPage(),
   ];
 
@@ -65,17 +61,17 @@ class _BottomNavigationBarExampleState
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.chat),
-            label: 'Chat',
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.chat),
+          //   label: 'Chat',
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add),
             label: 'Add',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.chat_bubble),
-            label: 'chat',
+            icon: Icon(Icons.travel_explore),
+            label: 'Visit',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),

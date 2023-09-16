@@ -6,6 +6,7 @@ import 'package:medicare/profile/profile.dart';
 // ignore: depend_on_referenced_packages
 //import 'package:profile/pages/profile.dart';
 
+import '../constants/appbar.dart';
 import 'details_page.dart';
 //import 'package:rest_api_app/users_pets.dart';
 
@@ -13,10 +14,10 @@ class ProfileListPage extends StatefulWidget {
   const ProfileListPage({Key? key}) : super(key: key);
 
   @override
-  State<ProfileListPage> createState() => _HomePageState();
+  State<ProfileListPage> createState() => _ProfileListPageState();
 }
 
-class _HomePageState extends State<ProfileListPage> {
+class _ProfileListPageState extends State<ProfileListPage> {
   // For holding response as UserPets
   late UserProfile profile;
   // for data is loaded flag
@@ -55,10 +56,8 @@ class _HomePageState extends State<ProfileListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('List of Profile '),
-        centerTitle: true,
-      ),
+      appBar: MyAppBar('List Of Profile'),
+      backgroundColor: Colors.white,
       body: isDataLoaded
           ? errorMessage.isNotEmpty
               ? Text(errorMessage)
