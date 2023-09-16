@@ -4,7 +4,6 @@ import 'package:medicare/constants/colors.dart';
 import 'package:medicare/constants/text_buttons/username_pass.dart';
 import 'package:medicare/login/RecoveryPages/recovery_page.dart';
 import 'package:medicare/login/signup_page.dart';
-import 'package:medicare/welcome/welcome.dart';
 import 'package:medicare/constants/appbar.dart';
 import 'package:medicare/navigation_bar/navigation_bar.dart';
 
@@ -16,8 +15,6 @@ class Login extends StatelessWidget {
     return Scaffold(
       appBar: MyAppBar('Login'),
       backgroundColor: Colors.white,
-//
-//
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -45,15 +42,12 @@ class Login extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          BottomNavigationBarExampleApp(), // Navigate to WelcomePage
+                          const BottomNavigationBarExampleApp(), // Navigate to WelcomePage
                     ),
                   );
                 },
               ),
-
-              const SizedBox(height: 16), // Spacing
-
-              // Password recovery button
+              const SizedBox(height: 16),
               TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -72,10 +66,7 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-
               const SizedBox(height: 10), // Spacing
-
-              // Don't have an account? sign up
               TextButton(
                 onPressed: () {
                   Navigator.push(
@@ -94,11 +85,6 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              //
-              //
-              //
-              //
-              //
             ],
           ),
         ),

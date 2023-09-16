@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/homepage/homepage.dart';
-
-import '../appointment/AppointmentPage.dart';
-import '../profile/mainapp.dart';
-import '../profile/profileList_page.dart';
-import '../welcome/welcome.dart';
+import 'package:medicare/appointment/AppointmentPage.dart';
+import 'package:medicare/profile/profileList_page.dart';
+import 'package:medicare/welcome/welcome.dart';
 
 class BottomNavigationBarExampleApp extends StatelessWidget {
   const BottomNavigationBarExampleApp({super.key});
@@ -29,14 +27,9 @@ class BottomNavigationBarExample extends StatefulWidget {
 class _BottomNavigationBarExampleState
     extends State<BottomNavigationBarExample> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+
   static const List<Widget> _widgetOptions = <Widget>[
     WelcomePage(),
-    // Text(
-    //   'Index 1',
-    //   style: optionStyle,
-    // ),
     CalendarPage(),
     CHomePage(),
     ProfileListPage(),
@@ -61,10 +54,6 @@ class _BottomNavigationBarExampleState
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.chat),
-          //   label: 'Chat',
-          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add),
             label: 'Add',
@@ -80,7 +69,7 @@ class _BottomNavigationBarExampleState
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: mainColor,
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: Colors.black,
         onTap: _onItemTapped,
       ),
     );
