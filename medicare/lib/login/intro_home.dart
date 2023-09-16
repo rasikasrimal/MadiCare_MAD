@@ -52,29 +52,10 @@ class Home extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 10),
 //
 //
 //
 //
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MainApp(),
-                    ),
-                  );
-                },
-                child: const Text(
-                  'Profile - Azam',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
 //
 //
 //

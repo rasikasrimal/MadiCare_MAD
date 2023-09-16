@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:medicare/constants/appbar.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/profile/Homepage.dart';
-import 'package:medicare/profile/profileList_page.dart';
 
 class Shop extends StatefulWidget {
   const Shop({Key? key}) : super(key: key);
@@ -15,7 +14,7 @@ class _ShopState extends State<Shop> {
   int currentPage = 0;
   final screens = [
     const Home(),
-    const HomePage(),
+    //const HomePage(),
   ];
 
   @override

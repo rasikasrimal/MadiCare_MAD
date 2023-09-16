@@ -6,6 +6,7 @@ import 'package:medicare/login/RecoveryPages/recovery_page.dart';
 import 'package:medicare/login/signup_page.dart';
 import 'package:medicare/welcome/welcome.dart';
 import 'package:medicare/constants/appbar.dart';
+import 'package:medicare/navigation_bar/navigation_bar.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key});
@@ -93,6 +94,30 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
+              //
+              //
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          const BottomNavigationBarExampleApp(),
+                    ),
+                  );
+                },
+                child: const Text(
+                  "Navigation Bar",
+                  style: TextStyle(
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ),
+              //
+              //
+              //
             ],
           ),
         ),

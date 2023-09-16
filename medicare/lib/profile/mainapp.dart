@@ -34,7 +34,7 @@ class _MainPageState extends State<MainPage> {
   // ignore: non_constant_identifier_names
   final screens = [
     const Home(),
-    const HomePage(),
+    const ProfileListPage(),
   ];
   @override
   Widget build(BuildContext context) {

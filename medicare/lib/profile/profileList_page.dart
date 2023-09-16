@@ -9,14 +9,14 @@ import 'package:medicare/profile/profile.dart';
 import 'details_page.dart';
 //import 'package:rest_api_app/users_pets.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class ProfileListPage extends StatefulWidget {
+  const ProfileListPage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<ProfileListPage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<ProfileListPage> {
   // For holding response as UserPets
   late UserProfile profile;
   // for data is loaded flag
