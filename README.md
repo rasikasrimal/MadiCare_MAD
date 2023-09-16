@@ -1,4 +1,4 @@
-# University Medical App 🏥
+# University Medical App 🏥.
 
 ## Introduction
 
