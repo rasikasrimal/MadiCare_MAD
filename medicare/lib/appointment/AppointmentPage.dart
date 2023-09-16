@@ -188,13 +188,13 @@ class _CalendarPageState extends State<CalendarPage> {
                       ],
                     ),
 
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
 //
 //
 //
                     // Choose Doctor (drop-down menu)
                     Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(20.0),
                           bottomRight: Radius.circular(20.0),
@@ -205,11 +205,11 @@ class _CalendarPageState extends State<CalendarPage> {
                           const SizedBox(height: 16),
                           Row(
                             children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.only(
+                              const Padding(
+                                padding: EdgeInsets.only(
                                     left: 40.0,
                                     top: 8.0), // Add left and top padding
-                                child: const Text(
+                                child: Text(
                                   'Doctor',
                                   style: TextStyle(
                                     fontSize: 18,
@@ -234,7 +234,8 @@ class _CalendarPageState extends State<CalendarPage> {
                                   return DropdownMenuItem<String>(
                                     value: value,
                                     child: Text(value,
-                                        style: TextStyle(color: mainColor)),
+                                        style:
+                                            const TextStyle(color: mainColor)),
                                   );
                                 }).toList(),
                               ),

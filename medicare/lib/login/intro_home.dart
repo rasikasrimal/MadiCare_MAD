@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicare/constants/colors.dart';
 import 'package:medicare/login/signup_page.dart';
-import 'package:medicare/profile/mainapp.dart';
 import 'package:medicare/constants/text_buttons/main_text_button.dart';
 import 'package:medicare/login/login_page.dart';
 
@@ -52,14 +51,6 @@ class Home extends StatelessWidget {
                   ),
                 ],
               ),
-//
-//
-//
-//
-//
-//
-//
-//
             ],
           ),
         ),
