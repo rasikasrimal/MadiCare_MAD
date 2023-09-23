@@ -1,30 +1,62 @@
-import 'package:flutter/cupertino.dart';
-import 'package:medicare/emergency/second_route.dart';
+import 'package:flutter/material.dart';
 
 class Emergency extends StatelessWidget {
-  const Emergency({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      navigationBar: const CupertinoNavigationBar(
-        middle: Text('Emergency Page'),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Emergency Page'),
+        backgroundColor: Colors.red,
       ),
-      child: Center(
-        child: CupertinoButton(
-          child: const Text(
-            'Open route',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(
+              Icons.warning,
+              size: 100,
+              color: Colors.red,
             ),
-          ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              CupertinoPageRoute(builder: (context) => const SecondRoute()),
-            );
-          },
+            const SizedBox(height: 20),
+            const Text(
+              'Emergency Alert!',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'Please stay calm and follow instructions.',
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.black,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Add your emergency action here
+              },
+              style: ElevatedButton.styleFrom(
+                primary: Colors.red,
+                onPrimary: Colors.white,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              child: const Text(
+                'Call for Help',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

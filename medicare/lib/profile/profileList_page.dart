@@ -86,13 +86,13 @@ class _ProfileListPageState extends State<ProfileListPage> {
               ));
         },
         leading: CircleAvatar(
-          radius: 21,
+          radius: 18,
           backgroundColor:
-              profile.data[index].age > 30 ? Colors.green : Colors.red,
+              profile.data[index].age > 30 ? Colors.white : Colors.white,
           child: CircleAvatar(
-            radius: 20,
+            radius: 25,
             backgroundColor:
-                profile.data[index].age > 30 ? Colors.green : Colors.red,
+                profile.data[index].age > 30 ? Colors.white : Colors.white,
             child: Image.network(
               profile.data[index].profile,
               width: 40, // Adjust the width and height as needed
@@ -118,7 +118,7 @@ class _ProfileListPageState extends State<ProfileListPage> {
         ),
         trailing: Icon(
           profile.data[index].age > 30 ? Icons.circle : Icons.square,
-          color: profile.data[index].age > 30 ? Colors.green : Colors.red,
+          color: profile.data[index].age > 30 ? Colors.black : Colors.lightBlue,
         ),
       ),
     );
